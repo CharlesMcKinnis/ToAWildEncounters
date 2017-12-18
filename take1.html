@@ -26,16 +26,20 @@ function d20()
                          "<td>"+d(100)+"</td>"+
                          "</tr>");
 }
+function cleartable()
+{
+    $("#20table").html("<tr><td>morn</td><td>noon</td><td>nite</td><td>encounter</td></tr>");
+}
         </script>
     </head>
     <body>
 
 </script>
-        Test<br>
-         <a href="#" onClick='d20();'>Click Me!</a><br>
-<div id="d20">Click!</div>
+         <a href="#" onClick='d20();'>Roll!</a>
+         <br>
+         <a href="#" onClick='cleartable();'>Clear!</a>
 <table id="20table">
-    <tr><td>morning</td><td>noon</td><td>night</td><td>encounter</td></tr>
+    <tr><td>morn</td><td>noon</td><td>nite</td><td>encounter</td></tr>
 </table>
     </body>
 </html>
