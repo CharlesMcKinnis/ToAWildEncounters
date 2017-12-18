@@ -1,45 +1,74 @@
-<html>
+<html><meta charset="UTF-8"> 
     <head>
         <title>take 1</title>
         <script src="jquery-3.2.1.min.js"></script>
-        <script>Math.floor((Math.random() * 100) + 1);</script>
-        <script>
-        function d(max)
-        {
-            min=1;
-            return Math.floor(Math.random()*(max-min+1)+min);
+<style>
+table {
+    border: 1px solid black;
+}
+th {
+   width: 75px; 
+}
+</style>
+<script>
+var json = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': "wilderness_encounters.json",
+        'dataType': "json",
+        'success': function (data) {
+            json = data;
         }
+    });
+    return json;
+})(); 
+
+
+function d(max)
+{
+min=1;
+return Math.floor(Math.random()*(max-min+1)+min);
+}
 function d20()
 {
-    //$("#d20").append("<br>"+d(20));
-    //alert("clicked");
-    $morn=d(20);
-    if($morn > 15) {$mcolor="red";} else {$mcolor="";}
-    $noon=d(20);
-    if($noon > 15) {$ncolor="red";} else {$ncolor="";}
-    $nite=d(20);
-    if($nite > 15) {$icolor="red";} else {$icolor="";}
-    $("#20table").append("<tr>"+
-                         "<td bgcolor=\""+$mcolor+"\">"+$morn+"</td>"+
-                         "<td bgcolor=\""+$ncolor+"\">"+$noon+"</td>"+
-                         "<td bgcolor=\""+$icolor+"\">"+$nite+"</td>"+
-                         "<td>"+d(100)+"</td>"+
-                         "</tr>");
+//$("#d20").append("<br>"+d(20));
+//alert("clicked");
+$morn=d(20);
+if($morn > 15) {$mcolor="red";} else {$mcolor="";}
+$noon=d(20);
+if($noon > 15) {$ncolor="red";} else {$ncolor="";}
+$nite=d(20);
+if($nite > 15) {$icolor="red";} else {$icolor="";}
+$("#20table").append("<tr>"+
+'<td><a href="#" onClick="rmtr($(this));">remove</a></td>"'+
+"<td bgcolor=\""+$mcolor+"\">"+$morn+"</td>"+
+"<td bgcolor=\""+$ncolor+"\">"+$noon+"</td>"+
+"<td bgcolor=\""+$icolor+"\">"+$nite+"</td>"+
+"<td>"+d(100)+"</td>"+
+"</tr>");
+}
+function rmtr(row)
+{
+row.closest('tr').remove();
 }
 function cleartable()
 {
-    $("#20table").html("<tr><td>morn</td><td>noon</td><td>nite</td><td>encounter</td></tr>");
+$("#20table").html("<tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>encounter</th></tr>");
 }
-        </script>
-    </head>
-    <body>
+//$("#json").html(JSON.stringify(json, null, 2);)
+</script>
+</head>
+<body>
 
 </script>
          <a href="#" onClick='d20();'>Roll!</a>
          <br>
          <a href="#" onClick='cleartable();'>Clear!</a>
 <table id="20table">
-    <tr><td>morn</td><td>noon</td><td>nite</td><td>encounter</td></tr>
+    <tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>encounter</th></tr>
 </table>
     </body>
 </html>
+<div id="json"></div>

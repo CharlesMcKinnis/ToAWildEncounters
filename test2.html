@@ -1,0 +1,36 @@
+<html><meta charset="UTF-8"> 
+    <head>
+        <title>take 1</title>
+        <script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function () {
+  $('#get-data').click(function () {
+    var showData = $('#show-data');
+
+    $.getJSON('wilderness-encounters.json', function (data) {
+      console.log(data);
+
+      var items = data.items.map(function (item) {
+        return item.key + ': ' + item.value;
+      });
+
+      showData.empty();
+
+      if (items.length) {
+        var content = '<li>' + items.join('</li><li>') + '</li>';
+        var list = $('<ul />').html(content);
+        showData.append(list);
+      }
+    });
+
+    showData.text('Loading the JSON file.');
+  });
+});
+</script>
+</head>
+<body>
+    <a href="#" id="get-data">click</a>
+<div id="show-data">
+</div>
+</body>
+</html>
