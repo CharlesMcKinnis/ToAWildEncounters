@@ -11,8 +11,20 @@
         }
 function d20()
 {
-    $("#d20").append("<br>"+d(20));
+    //$("#d20").append("<br>"+d(20));
     //alert("clicked");
+    $morn=d(20);
+    if($morn > 15) {$mcolor="red";} else {$mcolor="";}
+    $noon=d(20);
+    if($noon > 15) {$ncolor="red";} else {$ncolor="";}
+    $nite=d(20);
+    if($nite > 15) {$icolor="red";} else {$icolor="";}
+    $("#20table").append("<tr>"+
+                         "<td bgcolor=\""+$mcolor+"\">"+$morn+"</td>"+
+                         "<td bgcolor=\""+$ncolor+"\">"+$noon+"</td>"+
+                         "<td bgcolor=\""+$icolor+"\">"+$nite+"</td>"+
+                         "<td>"+d(100)+"</td>"+
+                         "</tr>");
 }
         </script>
     </head>
@@ -22,5 +34,8 @@ function d20()
         Test<br>
          <a href="#" onClick='d20();'>Click Me!</a><br>
 <div id="d20">Click!</div>
+<table id="20table">
+    <tr><td>morning</td><td>noon</td><td>night</td><td>encounter</td></tr>
+</table>
     </body>
 </html>
