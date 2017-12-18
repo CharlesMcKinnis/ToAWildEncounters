@@ -9,16 +9,17 @@
             min=1;
             return Math.floor(Math.random()*(max-min+1)+min);
         }
+        
+$("button").click(function(){
+    $("div").$("d20").text("Hello world!");
+});
         </script>
     </head>
     <body>
-<script>$(document).ready( "#dayroll" ).click(function() {
-  alert( "Handler for .click() called." );
-  $("#20").text("clack");
-});
+
 </script>
         Test<br>
-         <button type="button" id="dayroll">Click Me!</button><br>
+         <a href="#" onClick='$("div").$("d20").text("Hello world!");'>Click Me!</a><br>
 <div id="d20">Click!</div>
     </body>
 </html>
