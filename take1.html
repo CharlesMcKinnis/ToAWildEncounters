@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>take 1</title>
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>Math.floor((Math.random() * 100) + 1);</script>
+        <script>
+        function d(max)
+        {
+            min=1;
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+        </script>
+    </head>
+    <body>
+<script>$(document).ready( "#dayroll" ).click(function() {
+  alert( "Handler for .click() called." );
+  $("#20").text("clack");
+});
+</script>
+        Test<br>
+         <button type="button" id="dayroll">Click Me!</button><br>
+<div id="d20">Click!</div>
+    </body>
+</html>
