@@ -42,23 +42,23 @@ $("#20table").append("<tr>"+
 "<td bgcolor=\""+$mcolor+"\">"+$morn+"</td>"+
 "<td bgcolor=\""+$ncolor+"\">"+$noon+"</td>"+
 "<td bgcolor=\""+$icolor+"\">"+$nite+"</td>"+
-'<td><a href="#" onClick="encval($(this));">'+$enc+'</a></td>'+
+'<td><a href="#" onClick="encounter_text(\''+$enc+'\')">'+$enc+'</a></td>'+
 "</tr>");
 
 //onClick="rmtr($(this));
 // function rmtr(row)
 // console.log($(this).closest('tr').find("td:eq(4)").text())
-// overwrite enc '<td><a href="#" onClick="encounter_text(\''+$enc+'\')">'+$enc+'</a></td>'+
-// broke '<td><a href="#" onClick="alert($(this).closest("tr").find("td:eq(4)").text());">'+$enc+'</a></td>'+
+// fixed '<td><a href="#" onClick="encounter_text(\''+$enc+'\')">'+$enc+'</a></td>'+
+// works a different way '<td><a href="#" onClick="encval($(this));">'+$enc+'</a></td>'+
 
 }
 function encounter_text(encnum) {
-    $("#helptext").html('number: '+encnum+"<br>")
-    $("#helptext").append("<b>"+obj[$("#land").val()][encnum]+"</b><br>")
+    //$("#helptext").html('number: '+encnum+"<br>")
+    $("#helptext").html("<b>"+obj[$("#land").val()][encnum]+"</b><br>")
     $("#helptext").append( obj["encounters"][obj[$("#land").val()][encnum]] )
 }
 function encval(row) {
-alert(row.closest('tr').find("td:eq(4)").text());
+//alert(row.closest('tr').find("td:eq(4)").text());
 encounter_text(row.closest('tr').find("td:eq(4)").text());
 }
 function rmtr(row)
