@@ -2,6 +2,7 @@
     <head>
         <title>take 1</title>
         <script src="jquery-3.2.1.min.js"></script>
+        <script src="wilderness-encounters2.js"></script>
 <style>
 table {
     border: 1px solid black;
@@ -9,22 +10,16 @@ table {
 th {
    width: 75px; 
 }
+div#helptext {
+    position: fixed;
+    border: 3px solid #73AD21;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+}
 </style>
 <script>
-var json = (function () {
-    var json = null;
-    $.ajax({
-        'async': false,
-        'global': false,
-        'url': "wilderness_encounters.json",
-        'dataType': "json",
-        'success': function (data) {
-            json = data;
-        }
-    });
-    return json;
-})(); 
-
 
 function d(max)
 {
@@ -41,13 +36,30 @@ $noon=d(20);
 if($noon > 15) {$ncolor="red";} else {$ncolor="";}
 $nite=d(20);
 if($nite > 15) {$icolor="red";} else {$icolor="";}
+$enc=d(100);
 $("#20table").append("<tr>"+
 '<td><a href="#" onClick="rmtr($(this));">remove</a></td>"'+
 "<td bgcolor=\""+$mcolor+"\">"+$morn+"</td>"+
 "<td bgcolor=\""+$ncolor+"\">"+$noon+"</td>"+
 "<td bgcolor=\""+$icolor+"\">"+$nite+"</td>"+
-"<td>"+d(100)+"</td>"+
+'<td><a href="#" onClick="encval($(this));">'+$enc+'</a></td>'+
 "</tr>");
+
+//onClick="rmtr($(this));
+// function rmtr(row)
+// console.log($(this).closest('tr').find("td:eq(4)").text())
+// overwrite enc '<td><a href="#" onClick="encounter_text(\''+$enc+'\')">'+$enc+'</a></td>'+
+// broke '<td><a href="#" onClick="alert($(this).closest("tr").find("td:eq(4)").text());">'+$enc+'</a></td>'+
+
+}
+function encounter_text(encnum) {
+    $("#helptext").html('number: '+encnum+"<br>")
+    $("#helptext").append("<b>"+obj[$("#land").val()][encnum]+"</b><br>")
+    $("#helptext").append( obj["encounters"][obj[$("#land").val()][encnum]] )
+}
+function encval(row) {
+alert(row.closest('tr').find("td:eq(4)").text());
+encounter_text(row.closest('tr').find("td:eq(4)").text());
 }
 function rmtr(row)
 {
@@ -57,18 +69,29 @@ function cleartable()
 {
 $("#20table").html("<tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>encounter</th></tr>");
 }
-//$("#json").html(JSON.stringify(json, null, 2);)
 </script>
 </head>
 <body>
 
 </script>
          <a href="#" onClick='d20();'>Roll!</a>
-         <br>
          <a href="#" onClick='cleartable();'>Clear!</a>
+<select id="land">
+  <option value="Beach">Beach</option>
+  <option value="Jungle No Undead">Jungle No Undead</option>
+  <option value="Jungle Lesser Undead">Jungle Lesser Undead</option>
+  <option value="Jungle Greater Undead">Jungle Greater Undead</option>
+  <option value="Mountains">Mountains</option>
+  <option value="Rivers">Rivers</option>
+  <option value="Ruins">Ruins</option>
+  <option value="Swamp">Swamp</option>
+  <option value="Wasteland">Wasteland</option>
+</select> 
+<br>
 <table id="20table">
     <tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>encounter</th></tr>
 </table>
+<div id="helptext"></div>
     </body>
 </html>
-<div id="json"></div>
+
