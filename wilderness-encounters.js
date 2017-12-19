@@ -1,5 +1,4 @@
-JSON.parse('
-{
+var obj = JSON.parse('{
     "encounters": {
         "Aarakocra":"Any character with a passive Wisdom (Perception) score of 15 or higher spots 1d4 + 1 aarakocra flying overhead. These creatures are scouts from Kir Sabal or another aerie. They observe the party from a safe distance but don’t approach unless the characters demonstrate peaceful intentions. The bird folk are friendly and can point characters in the direction of nearby landmarks.",
         "Albino dwarves":"The characters are ambushed by 1d4 + 3 albino dwarf warriors (see appendix D) that attack from hidden burrows. Any character with a passive Wisdom (Perception) score of 13 or higher spots the dwarves, but all others are surprised. The dwarves knock characters out rather than killing them, stealing food, water, and gear from those rendered unconscious. They break off their attack if any character speaks Dwarvish to them or demonstrates peaceful intentions.", 
@@ -15,19 +14,19 @@ JSON.parse('
         "Chwinga":"A chwinga (see appendix D) takes an interest in the characters. It attempts to steal something valuable from an unguarded pack or canoe, but is noticed by any character with a passive Wisdom (Perception) score of 17 or higher. The chwinga always leaves something else in exchange: a pretty shell, a handful of nuts, or an uncut gemstone (10 gp).",
         "Crocodiles":"Any character with a passive Wisdom (Perception) score of 12 or higher sees and hears 1d4 + 1 crocodiles moments before they attack; all other characters are surprised. A crocodile can capsize a canoe and throw its occupants into the water by using its action and succeeding on a DC 15 Strength (Athletics) check.",
         "Cyclops":"A cyclops is journeying toward its home near Snapping Turtle Bay. It isn’t looking for a fight, but any sudden moves or hostility from the characters might trigger one. The cyclops knows the region around Lake Luo and the western end of the Valley of Dread quite well, and it’s never seen anything like Omu in those areas. Roll twice on the Treasure Drops table to see what treasure, if any, the cyclops has.",
-        "Dinosaurs, allosaurus":"Encounters with 'honkers' are common in Chult, though not all such creatures are hostile. 'honker' are common in Chult, though not all such creatures are hostile. The party’s scent attracts 1d3 allosauruses, which appear 100 yards away when the characters first notice them. Any character who succeeds on a DC 15 Wisdom (Survival) check can find a safe refuge (a high branch, a small crevice, a hollow log, and so forth) that the predators can’t reach or enter.",
-        "Dinosaurs, ankylosaurus":"Encounters with 'honkers' are common in Chult, though not all such creatures are hostile. An ornery ankylosaurus is gorging on plants, but it attacks any characters who disturb it.",
-        "Dinosaurs, brontosaurus":"Encounters with 'honkers' are common in Chult, though not all such creatures are hostile. A lone brontosaurus (see appendix D) lumbers toward the characters, oblivious to their presence. Though it might step on characters who don’t get out of its way, it fights only in self-defense.",
-        "Dinosaurs, deinonychus":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. A wild boar races across the party’s path, followed closely by a hunting pack of 1d4 + 2 deinonychuses (see appendix D). The predators decide the characters are more interesting prey.",
-        "Dinosaurs, dimetrodon":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. A pack of 2d6 dimetrodons (see appendix D) are spotted along a sunny riverbank or on rocks above the water. Roll any die. On an odd result, the dimetrodons take no notice of the characters; on an even result, they’re hungry and attack at the slightest provocation, or if the characters approach within 100 feet of them.",
-        "Dinosaurs, hadrosaurus":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. A herd of 3d6 hadrosauruses (see appendix D) are grazing nearby, with 1d6 noncombatant young among them. The adults don’t attack unless they’re attacked or antagonized. The young are Small beasts that can be sold to Ifan Talro’a in Port Nyanzaru for 50 gp each, or for 100 gp if a character succeeds on a DC 15 Charisma (Persuasion) check to negotiate the price. The young dinosaurs are easy to handle if separated from their parents, but the adults fight if their young are captured.",
-        "Dinosaurs, plesiosaurus":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. Two plesiosauruses are fighting over a dead giant octopus. If the characters are on a river, the creatures are spotted at a distance of 300 feet, whereupon they bellow menacingly and move to attack the party. To paddle a canoe to a safe spot along the riverbank, one character in the canoe must succeed on a DC 13 Strength (Athletics) check, with other characters in the canoe using the Help action. Canoes that don’t reach the bank are flipped and demolished by the reptiles, which then attack swimmers in the water.",
-        "Dinosaurs, pteranodon":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. A flock of 2d6 pteranodons is spotted overhead. They keep their distance and attack only if threatened.",
-        "Dinosaurs, quetzalcoatlus":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. A flight of 1d4 + 1 quetzalcoatluses (see appendix D) is spotted overhead. They keep their distance and attack only if threatened.",
-        "Dinosaurs, stegosaurus":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. This lone stegosaurus (see appendix D) is in a genial mood. It approaches the characters out of curiosity, but anyone who touches it triggers a swipe from its tail.",
-        "Dinosaurs, triceratops":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. A triceratops that appears to be grazing alone is actually a mother with a nearby nest containing one noncombatant hatchling and two unhatched eggs. The mother eyes the characters suspiciously but doesn’t attack unless they position themselves between her and the nest. Ifan Talro’a in Port Nyanzaru offers 50 gp for an intact triceratops egg or hatchling, or a character can talk him up to 150 gp with a successful DC 15 Charisma (Persuasion) check.",
-        "Dinosaurs, tyrannosaurus":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. The characters spot a tyrannosaurus rex 300 yards away. There’s a 50 percent chance that the hungry behemoth is fighting either a stegosaurus, a triceratops, a pair of giant constrictor snakes, a giant ape, or a mob of ghouls and zombies. None of these creatures will voluntarily team up with the party, but their presence might weaken the tyrannosaurus to the point where the characters have a chance of slaying it. Characters can avoid an encounter with the tyrannosaurus if they keep their distance and succeed on a DC 15 group Dexterity (Stealth) check. If any character is trained in the Survival skill, all the characters’ checks are made with advantage.",
-        "Dinosaurs, velociraptor":"Encounters with 'honker' are common in Chult, though not all such creatures are hostile. A pack of 3d6 velociraptors (see appendix D) burst out from behind cover and attack. Make a single Dexterity (Stealth) check for the dinosaurs, with advantage. Any character whose passive Wisdom (Perception) score equals or exceeds the velociraptors’ check result is not surprised.",
+        "Dinosaurs, allosaurus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. honkers are common in Chult, though not all such creatures are hostile. The party’s scent attracts 1d3 allosauruses, which appear 100 yards away when the characters first notice them. Any character who succeeds on a DC 15 Wisdom (Survival) check can find a safe refuge (a high branch, a small crevice, a hollow log, and so forth) that the predators can’t reach or enter.",
+        "Dinosaurs, ankylosaurus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. An ornery ankylosaurus is gorging on plants, but it attacks any characters who disturb it.",
+        "Dinosaurs, brontosaurus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A lone brontosaurus (see appendix D) lumbers toward the characters, oblivious to their presence. Though it might step on characters who don’t get out of its way, it fights only in self-defense.",
+        "Dinosaurs, deinonychus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A wild boar races across the party’s path, followed closely by a hunting pack of 1d4 + 2 deinonychuses (see appendix D). The predators decide the characters are more interesting prey.",
+        "Dinosaurs, dimetrodon":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A pack of 2d6 dimetrodons (see appendix D) are spotted along a sunny riverbank or on rocks above the water. Roll any die. On an odd result, the dimetrodons take no notice of the characters; on an even result, they’re hungry and attack at the slightest provocation, or if the characters approach within 100 feet of them.",
+        "Dinosaurs, hadrosaurus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A herd of 3d6 hadrosauruses (see appendix D) are grazing nearby, with 1d6 noncombatant young among them. The adults don’t attack unless they’re attacked or antagonized. The young are Small beasts that can be sold to Ifan Talro’a in Port Nyanzaru for 50 gp each, or for 100 gp if a character succeeds on a DC 15 Charisma (Persuasion) check to negotiate the price. The young dinosaurs are easy to handle if separated from their parents, but the adults fight if their young are captured.",
+        "Dinosaurs, plesiosaurus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. Two plesiosauruses are fighting over a dead giant octopus. If the characters are on a river, the creatures are spotted at a distance of 300 feet, whereupon they bellow menacingly and move to attack the party. To paddle a canoe to a safe spot along the riverbank, one character in the canoe must succeed on a DC 13 Strength (Athletics) check, with other characters in the canoe using the Help action. Canoes that don’t reach the bank are flipped and demolished by the reptiles, which then attack swimmers in the water.",
+        "Dinosaurs, pteranodon":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A flock of 2d6 pteranodons is spotted overhead. They keep their distance and attack only if threatened.",
+        "Dinosaurs, quetzalcoatlus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A flight of 1d4 + 1 quetzalcoatluses (see appendix D) is spotted overhead. They keep their distance and attack only if threatened.",
+        "Dinosaurs, stegosaurus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. This lone stegosaurus (see appendix D) is in a genial mood. It approaches the characters out of curiosity, but anyone who touches it triggers a swipe from its tail.",
+        "Dinosaurs, triceratops":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A triceratops that appears to be grazing alone is actually a mother with a nearby nest containing one noncombatant hatchling and two unhatched eggs. The mother eyes the characters suspiciously but doesn’t attack unless they position themselves between her and the nest. Ifan Talro’a in Port Nyanzaru offers 50 gp for an intact triceratops egg or hatchling, or a character can talk him up to 150 gp with a successful DC 15 Charisma (Persuasion) check.",
+        "Dinosaurs, tyrannosaurus":"Encounters with honkers are common in Chult, though not all such creatures are hostile. The characters spot a tyrannosaurus rex 300 yards away. There’s a 50 percent chance that the hungry behemoth is fighting either a stegosaurus, a triceratops, a pair of giant constrictor snakes, a giant ape, or a mob of ghouls and zombies. None of these creatures will voluntarily team up with the party, but their presence might weaken the tyrannosaurus to the point where the characters have a chance of slaying it. Characters can avoid an encounter with the tyrannosaurus if they keep their distance and succeed on a DC 15 group Dexterity (Stealth) check. If any character is trained in the Survival skill, all the characters’ checks are made with advantage.",
+        "Dinosaurs, velociraptor":"Encounters with honkers are common in Chult, though not all such creatures are hostile. A pack of 3d6 velociraptors (see appendix D) burst out from behind cover and attack. Make a single Dexterity (Stealth) check for the dinosaurs, with advantage. Any character whose passive Wisdom (Perception) score equals or exceeds the velociraptors’ check result is not surprised.",
         "Dragon, faerie":"An invisible green faerie dragon takes an interest in the adventurers and follows them for a while. If the characters are in good spirits, the tiny dragon plays harmless pranks on them during the party’s next short or long rest. If the characters are not angered by this trickery, the dragon appears and truthfully answers three of their questions before bidding the party farewell. If the characters seem dour or mean, or if the faerie dragon’s pranks sour them, it flutters off without providing any sort of aid.<br> The faerie dragon visited Omu recently and knows about the evil gargoyles and “snake people” that watch over the city. It also knows things about other nearby landmarks or locations, as you determine.",
         "Dragon, red":"If the characters are within 50 miles of Wyrmheart Mine (see chapter 2), they see the young red dragon known as Tzindelor or Tinder circling over that location. If they’re farther away, they see her flying in the direction of the mine. The dragon ignores the characters unless they do something to attract her attention.",
         "Eblis":"If the characters are on the move when this encounter occurs, they stumble across 1d4 + 1 eblis (see appendix D) living in reed huts built on stilts above a swampy marsh or pond. The eblis attack wounded or weak-looking characters but offer to trade information for precious gemstones if faced with a strong, well-armed group. For 50 gp worth of gems, they point the adventurers in the direction of nearby landmarks. If the characters follow these directions, they have advantage on checks made to reach those landmarks (see “Navigation,” page 38). If the characters defeat the eblis and search the huts, roll three times on the Treasure Drops table to determine what, if anything, the eblis have stashed in their homes. If this encounter occurs while the party is camped, the eblis sneak into the camp and try to drag one character away.",
@@ -89,8 +88,8 @@ JSON.parse('
         "Yellow musk creeper and zombies":"The characters pass close to a ruin inhabited by 3d6 yellow musk zombies (see appendix D). The zombies might be spread across the area or bunched together, depending on the terrain. In the heart of the ruin, a yellow musk creeper (see appendix D) clings to a crumbling archway, statue, or polluted well. If this encounter occurs while the party is camped, the zombies emerge from a nearby ruin to attack the camp and attempt to knock characters unconscious. They then drag those characters back to the yellow musk creeper.",
         "Yuan-ti":"Yuan-ti patrols consist of 1d6 + 1 yuan-ti purebloods, which keep their distance as they try to gather information to take back to Ras Nsi. The yuan-ti are camouflaged, but any character who succeeds on a DC 13 Wisdom (Perception) check made with disadvantage catches sight of the serpent folk as they withdraw. If this encounter occurs within 25 miles of Omu, the patrol is instead made up of 1d4 yuan-ti malisons (type 1), and it takes a DC 14 Wisdom (Perception) check to spot them. If the characters chase after the malisons, they transform into snakes and vanish into the jungle.",
         "Zhentarim":"A Zhent assassin with a flying snake pet leads a priest, 2d6 thugs, and 1d6 tribal warriors through the wilderness in search of Artus Cimber and the Ring of Winter. If Artus is with the characters, the Zhents demand the ring and attack if they don’t receive it quickly. Otherwise, they show little interest in the characters. Roll once on the Treasure Drops table to determine what treasure, if any, the Zhents carry.",
-        "Zorbos":"If this encounter occurs while the characters are traveling, they spot 2d6 zorbos (see appendix D) in wukka trees (see appendix C). The creatures growl and bare their teeth if any characters approach them. If the characters act in a threatening manner, the zorbos attack. If this encounter occurs while the party is camped, the hungry zorbos drop from the surrounding trees and attack.",
-    }
+        "Zorbos":"If this encounter occurs while the characters are traveling, they spot 2d6 zorbos (see appendix D) in wukka trees (see appendix C). The creatures growl and bare their teeth if any characters approach them. If the characters act in a threatening manner, the zorbos attack. If this encounter occurs while the party is camped, the hungry zorbos drop from the surrounding trees and attack."
+    },
     "Beach": [
         "Aarakocra",
         "Aarakocra",
@@ -292,7 +291,7 @@ JSON.parse('
         "Yellow musk creeper and zombies",
         "Yuan-ti",
         "Zhentarim",
-        "Zorbos",
+        "Zorbos"
     ],
     "Jungle Lesser Undead": [
         "Albino dwarves",
@@ -393,8 +392,8 @@ JSON.parse('
         "Yuan-ti",
         "Yuan-ti",
         "Zorbos",
-        "Zorbos",
-    ]
+        "Zorbos"
+    ],
     "Jungle Greater Undead": [
         "Artus Cimber",
         "Assassin vines",
@@ -495,7 +494,7 @@ JSON.parse('
         "Yuan-ti",
         "Yuan-ti",
         "Zorbos",
-        "Zorbos",
+        "Zorbos"
     ],
     "Mountains": [
         "Aarakocra",
@@ -597,8 +596,8 @@ JSON.parse('
         "Troll",
         "Wereboar",
         "Wereboar",
-        "Wereboar",
-                  ],
+        "Wereboar"
+    ],
     "Rivers": [
         "Aarakocra",
         "Aarakocra",
@@ -701,8 +700,8 @@ JSON.parse('
         "Yuan-ti",
         "Yuan-ti",
         "Zhentarim",
-        "Zhentarim",
-               ],
+        "Zhentarim"
+    ],
     "Ruins": [
         "Albino dwarves",
         "Albino dwarves",
@@ -802,8 +801,8 @@ JSON.parse('
         "Yuan-ti",
         "Yuan-ti",
         "Zhentarim",
-        "Zhentarim",
-              ],
+        "Zhentarim"
+    ],
     "Swamp": [
         "Aldani",
         "Aldani",
@@ -904,9 +903,8 @@ JSON.parse('
         "Undead, skeletons",
         "Undead, zombies",
         "Yellow musk creeper and zombies",
-        "Yuan-ti",
-
-              ],
+        "Yuan-ti"
+    ],
     "Wasteland": [
         "Artus Cimber",
         "Cache",
@@ -1005,9 +1003,11 @@ JSON.parse('
         "Undead, skeletons",
         "Undead, zombies",
         "Zhentarim",
-        "Zhentarim",
+        "Zhentarim"
     ]
-}', (key, value) => {
-console.log(key);
-return value;
-});
+}');
+
+//, (key, value) => {
+//console.log(key);
+//return value;
+//});
