@@ -1,27 +1,26 @@
 <html><meta charset="UTF-8"> 
-    <head>
-        <title>Tomb of Annihilation Wilderness Encounters</title>
-        <script src="jquery-3.2.1.min.js"></script>
-        <script async src="wilderness-encounters2.js"></script>
+<head>
+<title>Tomb of Annihilation Wilderness Encounters</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script async src="wilderness-encounters2.js"></script>
 <style>
 table {
-    border: 1px solid black;
-    left: 0;
-    width: 45%;
+border: 1px solid black;
+left: 0;
+width: 45%;
 }
 th {
-   width: 75px; 
+width: 75px; 
 }
 div#helptext {
-    position: fixed;
-    border: 3px solid #73AD21;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
+position: fixed;
+border: 3px solid #73AD21;
+top: 0;
+right: 0;
+width: 45%;
+height: 100%;
 </style>
 <script>
-
 function d(max)
 {
 min=1;
@@ -45,18 +44,10 @@ $("#20table").append("<tr>"+
 "<td bgcolor=\""+$icolor+"\">"+$nite+"</td>"+
 '<td><a href="#" onClick="encounter_text(\''+$enc+'\')">'+$enc+'</a></td>'+
 "</tr>");
-
-//onClick="rmtr($(this));
-// function rmtr(row)
-// console.log($(this).closest('tr').find("td:eq(4)").text())
-// fixed '<td><a href="#" onClick="encounter_text(\''+$enc+'\')">'+$enc+'</a></td>'+
-// works a different way '<td><a href="#" onClick="encval($(this));">'+$enc+'</a></td>'+
-
 }
 function encounter_text(encnum) {
-    //$("#helptext").html('number: '+encnum+"<br>")
-    $("#helptext").html("<b>"+obj[$("#land").val()][encnum]+"</b><br>")
-    $("#helptext").append( obj["encounters"][obj[$("#land").val()][encnum]] )
+$("#helptext").html("<b>"+obj[$("#land").val()][encnum]+"</b><br>")
+$("#helptext").append( obj["encounters"][obj[$("#land").val()][encnum]] )
 }
 function encval(row) {
 //alert(row.closest('tr').find("td:eq(4)").text());
@@ -73,10 +64,8 @@ $("#20table").html("<tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>enc
 </script>
 </head>
 <body>
-
-</script>
-         <a href="#" onClick='d20();'>Roll!</a>
-         <a href="#" onClick='cleartable();'>Clear!</a>
+<a href="#" onClick='d20();'>Roll!</a>
+<a href="#" onClick='cleartable();'>Clear!</a>
 <select id="land">
   <option value="Beach">Beach</option>
   <option value="Jungle No Undead">Jungle No Undead</option>
@@ -90,9 +79,9 @@ $("#20table").html("<tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>enc
 </select> 
 <br>
 <table id="20table">
-    <tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>encounter</th></tr>
+<tr><th> </th><th>morn</th><th>noon</th><th>nite</th><th>encounter</th></tr>
 </table>
 <div id="helptext">Every day in the Chult wilderness invovled rolling a pile of die, and flipping pages back and forth in the book, so I made an html to have the information in a single place on my iPad.<br><br>Clicking "Roll!" will create a line for each day (repeatedly clicking will add rows). Change the terrain at the top and click the encounter number on the row for a description of the encounter. When you are finished with a day, you can click "remove" to remove the row.<br><br>The page is an html, jquery and json in a javascript file and requires no web server to function so you can run it locally on a laptop with a browser. https://github.com/CharlesMcKinnis/ToAWildEncounters</div>
-    </body>
+</body>
 </html>
 
